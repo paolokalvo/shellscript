@@ -1,0 +1,35 @@
+# função para verificar o sistema. 
+
+function sistema
+
+ {
+
+  echo"### Informações gerais sobre o sistema ###"
+ 
+  lsb_release -a
+
+  echo
+
+  echo "### Informações sobre a CPU ###"
+
+  cpu=`grep -wc "processor" /proc/cpuinfo`
+
+  modelo=`grep -w "modelname" /proc/cpuinfo  | awk -F: '{print $2}'`
+
+  echo "Processador = $cpu"
+
+  echo "Modelo= $modelo"
+
+  echo
+
+  echo "### Informações sobre a memória ###"
+
+  total=`grep -w "MemTotal" /proc/meminfo | awk '{print $2}'`
+
+  free=`grep -w "MemFree" /proc/meminfo | awk '{print $2}'`
+
+  echo "Total de memória: $total kB"
+
+  echo "Memória disponível : $free kB"
+
+ }
