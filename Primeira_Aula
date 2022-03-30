@@ -1,0 +1,17 @@
+echo $SHELL
+who | wc -l  |
+
+# Funciona interpretando tudo como string 
+echo " Existem  `who | wc -l ` usuários conectados " 
+
+# Funciona com o comando mais string 
+echo  Existem  `who | wc -l ` usuários conectados 
+
+# Redirecionamento de Arquivos 
+
+ls | wc -l # mostra o numero de linhas 
+
+https://drive.google.com/file/d/1Nj50x2E2rf-papWAyFbVbjLSZYcEwztJ/view
+
+https://drive.google.com/file/d/1uimImdyH93WkuQmWjnZ75uJNuILpYAld/view?usp=sharing
+
